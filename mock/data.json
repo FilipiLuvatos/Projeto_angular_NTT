@@ -1,0 +1,75 @@
+{
+  "contas-receber": [
+    {
+      "id": "1",
+      "title": "conta 1",
+      "company": "Empresa X",
+      "date": "12/03/2024",
+      "value": "R$ 500,00",
+      "status": "Pago"
+    },
+    {
+      "id": "2",
+      "title": "conta 2",
+      "company": "Empresa Z",
+      "date": "12/05/2024",
+      "value": "R$ 3.500,00",
+      "status": "Pagar"
+    }
+  ],
+  "contas-pagar": [
+    {
+      "id": "1",
+      "descricao": "conta 1",
+      "valor": 1.5,
+      "empresa": "TesteData",
+      "data_vencimento": "2024-05-12"
+    },
+    {
+      "id": "2",
+      "descricao": "Teste",
+      "valor": 1500,
+      "empresa": "NTTESTE",
+      "data_vencimento": "2024-05-07"
+    },
+    {
+      "id": "3",
+      "descricao": "Teste",
+      "valor": 555,
+      "empresa": "Ntt",
+      "data_vencimento": "2024-05-09"
+    },
+    {
+      "id": "4",
+      "descricao": "Teste2",
+      "valor": 553,
+      "empresa": "Ntt2",
+      "data_vencimento": "2024-05-02"
+    },
+    {
+      "id": "5",
+      "descricao": "Conta de Luz",
+      "valor": 10000,
+      "empresa": "Enel",
+      "data_vencimento": "2024-05-08"
+    },
+    {
+      "id": "6",
+      "descricao": "Conta de Agua",
+      "valor": 1598,
+      "empresa": "Sabesp",
+      "data_vencimento": "2024-04-10"
+    }
+  ],
+  "pessoas": [
+    {
+      "id": "1",
+      "name": "João",
+      "document": "12332145676",
+      "birthdate": "02/05/1997",
+      "email": "joao@email.com",
+      "phone": "11 3232-3232",
+      "cellNumber": "11 9 9999-9999"
+    }
+  ]
+}

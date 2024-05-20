@@ -1,0 +1,39 @@
+<div>
+  <mat-toolbar color="primary" class="toolbar-primary">
+    <mat-toolbar-row>
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="sidenav['toggle']();open=!open">
+        <mat-icon class="companyName">menu</mat-icon>
+      </button>
+      <div class="companyName a-link-interno me-lg-5" routerLink="/business/dashboard">
+        <h5>NTT Data - Pilar Formar Angular</h5>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container id="nav">
+    <mat-sidenav class="sidenav-menu" color="primary" #sidenav mode="over" opened="false">
+      <mat-nav-list>
+        <div class="mat-card-header-text m-3 d-grid">
+        </div>
+        <div class="row mt-2 mb-5">
+          <div class="col-12 display-flex">
+            <mat-icon class="m-2">dashboard</mat-icon>
+            <a mat-list-item (click)="sidenav['toggle']();open=!open" routerLink="/business/dashboard">
+              Dashboard
+            </a>
+          </div>
+          <div class="col-12 display-flex" *ngFor="let item of fixedItemsMenu">
+            <mat-icon class="m-2">{{item['icon']}}</mat-icon>
+            <a mat-list-item (click)="sidenav['toggle']();open=!open" [routerLink]="item['route']">
+              {{item['name']}}
+            </a>
+          </div>
+        </div>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div class="container-fluid container-aplicacao">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

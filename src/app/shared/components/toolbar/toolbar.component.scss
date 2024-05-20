@@ -1,0 +1,56 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 230px;
+}
+
+.sidenav .mat-toolbar {
+  background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+
+.mat-toolbar-row {
+  background-color: blue !important;
+}
+
+.mat-sidenav-container {
+  min-height: 93vh !important;
+}
+
+.sidenav-menu {
+  width: 245px;
+  overflow: hidden;
+  background-color: #7cd5ff;
+  color: white;
+}
+
+.container-aplicacao {
+  mat-form-field {
+    width: 100% !important;
+  }
+}
+
+
+mat-sidenav-content {
+  position: inherit !important;
+}
+
+.display-flex {
+  display: flex !important;
+}
+
+.mat-drawer-inner-container {
+  overflow: hidden !important;
+}
+
+.companyName {
+    color: white;
+}

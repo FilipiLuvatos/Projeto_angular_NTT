@@ -1,0 +1,28 @@
+<div *ngIf="!loading" class="row justify-content-md-center mt-5">
+  <div class="col-sm-6">
+    <canvas baseChart width="500" height="500"
+      [type]="'pie'"
+      [datasets]="pieChartDatasets"
+      [labels]="pieChartLabels"
+      [options]="pieChartOptions"
+      [plugins]="pieChartPlugins"
+      [legend]="pieChartLegend">
+    </canvas>
+    
+  </div>
+  <div class="col-sm-6">
+    <div style="display: block;">
+      <canvas baseChart width="600" height="600"
+        [type]="'line'"
+        [data]="lineChartData"
+        [options]="lineChartOptions"
+        [legend]="lineChartLegend">
+      </canvas>
+    </div>
+  </div>
+</div>
+
+
+
+
+  

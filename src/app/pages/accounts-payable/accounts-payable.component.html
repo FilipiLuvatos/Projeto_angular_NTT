@@ -1,0 +1,62 @@
+<section class="container contas-pagar ff-inter">
+    <header>
+        <h2>Contas a Pagar</h2>
+    </header>
+    <form>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="descricao">Descrição:</label>
+            <input type="text" class="form-control" id="descricao" name="descricao" placeholder="Descrição" [(ngModel)]="descricao">
+          </div>
+          <div class="form-group">
+            <label for="valor">Valor:</label>
+            <input type="number" class="form-control" id="valor" name="valor" placeholder="Valor" [(ngModel)]="valor">
+          </div>
+          <div class="form-group">
+            <label for="empresa">Empresa:</label>
+            <input type="text" class="form-control" id="empresa" name="empresa" placeholder="Empresa" [(ngModel)]="empresa">
+          </div>
+          <div class="form-group">
+            <label for="datav">Data de vencimento:</label>
+            <input type="date" class="form-control" id="datav" name="datav" placeholder="Data de vencimento" [(ngModel)]="data_vencimento">
+          </div>
+        </div>
+      </form>     
+    
+    <div class="form-row">
+        <div class="form-group">
+            <button (click)="cadastrarConta()" class="botao">Cadastrar</button>
+        </div>
+        <div class="form-group">
+            <button (click)="vizualizarContas()" class="botao">Vizualizar Contas</button>
+        </div> 
+        <div class="form-group">
+          <button (click)="ordenarPorValor()" class="botao">Ordenar por Valor</button>  
+      </div>
+      <div class="form-group">
+        <button (click)="ordenarPorDataVencimento()" class="botao">Ordenar por Data</button>  
+    </div>
+
+    </div>
+    <br>
+    <div *ngIf="vizualizaConta">
+        <table>
+            <thead>
+              <tr>
+                <th>Descrição</th>
+                <th>Valor</th>
+                <th>Empresa</th>
+                <th>Data de Vencimento</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let conta of listaContaPagar" >
+                <td>{{ conta.descricao }}</td>
+                <td>{{ conta.valor }}</td>
+                <td>{{ conta.empresa }}</td>
+                <td>{{ conta.data_vencimento }}</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</section>
